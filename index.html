@@ -2,78 +2,72 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YoshiLog Test Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YoshiLog</title>
   <style>
     body {
-      font-family: "Segoe UI", sans-serif;
-      background-color: #f5f5f5;
-      margin: 0;
-      padding: 2rem;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
       color: #333;
-    }
-
-    header {
-      background-color: #4CAF50;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-      border-radius: 8px;
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
     }
 
     h1 {
-      margin: 0;
+      color: #007acc;
+      font-size: 2.5em;
     }
 
-    section {
-      margin-top: 2rem;
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    .container {
+      max-width: 800px;
+      margin: auto;
     }
 
-    .button {
-      display: inline-block;
-      background-color: #4CAF50;
-      color: white;
-      padding: 0.5rem 1rem;
-      margin-top: 1rem;
-      border: none;
-      border-radius: 4px;
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 1em 0;
+    }
+
+    a {
       text-decoration: none;
-      font-size: 1rem;
-      transition: background-color 0.3s;
+      color: #007acc;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 6px;
+      transition: background 0.3s;
     }
 
-    .button:hover {
-      background-color: #45a049;
+    a:hover {
+      background-color: #e0f0ff;
     }
 
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #999;
+    .footer {
+      margin-top: 3em;
+      font-size: 0.9em;
+      color: #888;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>YoshiLog</h1>
+    <p>よしんぺいの学習記録まとめサイトです📘</p>
 
-  <header>
-    <h1>YoshiLog テストページ</h1>
-  </header>
+    <ul>
+      <li><a href="ghpages.html">🌐 GitHub Pages 設定メモ</a></li>
+      <li><a href="under_construction.html">📌 C++ 学習まとめ</a></li>
+      <li><a href="under_construction.html">🎮 ゲーム開発メモ</a></li>
+      <li><a href="under_construction.html">🧰 よく使うツール＆コマンド集</a></li>
+    </ul>
 
-  <section>
-    <h2>ようこそ！</h2>
-    <p>これは GitHub Pages の動作確認用のテストページです。HTML と CSS を使って簡単なスタイルを付けています。</p>
-
-    <a href="https://github.com/" target="_blank" class="button">GitHubへ移動</a>
-  </section>
-
-  <footer>
-    &copy; 2025 よしんぺい
-  </footer>
-
+    <div class="footer">
+      &copy; 2025 よしんぺい
+    </div>
+  </div>
 </body>
 </html>

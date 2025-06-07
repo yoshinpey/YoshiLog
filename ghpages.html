@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Pages 設定メモ</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      padding: 2em;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #007acc;
+      font-size: 2em;
+    }
+
+    h2 {
+      color: #005f9e;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.2em;
+      margin-top: 2em;
+    }
+
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+    }
+
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      overflow-x: auto;
+      border-left: 4px solid #007acc;
+    }
+
+    a {
+      color: #007acc;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌐 GitHub Pages 設定メモ</h1>
+
+  <p>GitHub Pages を使って静的サイト（今回の学習ブログ）を公開した流れとつまづきポイントのまとめ。</p>
+
+  <h2>1. GitHub リポジトリ作成</h2>
+  <ul>
+    <li>リポジトリ名：<code>YoshiLog</code></li>
+    <li>リポジトリの公開設定をパブリックに設定。</li>
+  </ul>
+
+  <h2>2. GitHub Pages の設定</h2>
+  <ul>
+    <li>GitHub のリポジトリページへ。</li>
+    <li><code>Settings</code> → <code>Pages</code> を開く。</li>
+    <li>ブランチを <strong><code>master</code></strong>、フォルダは <strong><code>/(root)</code></strong>に設定。</li>
+  	<li>保存すると、以下のような URL が表示される。</li>
+  	<p><code>https://yoshinpey.github.io/YoshiLog/</code></p>
+  	<p>アクセスするとトップページに飛ぶ。</p>
+  	</ul>
+
+  <h2>3. ファイル構成の注意点</h2>
+  <ul>
+    <li>初期ファイルの名前は<strong>必ず<code>index.html</code>にしましょう！</strong></li>
+    <p>※indexファイルがないと<strong>「404 Not Found」</strong>エラーになります。</p>
+    <li>トップページを変更したい場合、index.html内で別ファイルを読み込むことで間接的にアクセス可能です。</li>
+  </ul>
+
+  <h2>4. Git コマンド操作</h2>
+  <p>基本的な流れ：</p>
+  <pre>
+git init
+git remote add origin https://github.com/yoshinpey/YoshiLog.git
+git pull origin master
+git add .
+git commit -m "初回コミット"
+git push origin master
+  </pre>
+
+  <h2>5. よくあるトラブル</h2>
+  <ul>
+    <li><strong>index.html が無い：</strong> GitHub Pages はトップに <code>index.html</code> を探すので用意</li>
+    <li><strong>ブランチが <code>None</code>：</strong> GitHub Pages の設定で <code>master</code> を選ぶ必要あり</li>
+    <li><strong>反映されない：</strong> 少し時間がかかることもある（数分待つ）</li>
+  </ul>
+
+  <h2>6. テストページ確認</h2>
+  <ul>
+    <li><a href="test.html">test.html</a></li>
+  <p>※↑実際のファイル名はちゃんとindex.htmlにしてね。</p>
+  </ul>
+
+  <h2>7. 補足</h2>
+  <ul>
+    <li><a href="https://docs.github.com/ja/pages" target="_blank">公式ドキュメント（GitHub Pages）</a></li>
+    <li><a href="https://pengi-n.co.jp/column/design/github-repository/" target="_blank">参考にしたページ1</a></li>
+    <li><a href="https://pengi-n.co.jp/column/design/git-githubpages/" target="_blank">参考にしたページ2</a></li>
+  </ul>
+  <p><a href="index.html">← トップページへ戻る</a></p>
+  
+  <p>更新日：2025年6月</p>
+</body>
+</html>
