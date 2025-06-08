@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Git 基本コマンドまとめ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fafafa;
+      color: #333;
+      padding: 1.5rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: .3rem;
+    }
+    h2 {
+      margin-top: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: .8rem;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: .6rem;
+    }
+    th {
+      background: #e9ecef;
+    }
+    tr:nth-child(even) {
+      background: #f5f5f5;
+    }
+    code {
+      background: #eee;
+      padding: .2em .4em;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Git 基本コマンドまとめ</h1>
+
+  <h2>🛠 初期設定</h2>
+  <table>
+    <tr><th>コマンド</th><th>説明</th></tr>
+    <tr><td><code>git config --global user.name "名前"</code></td><td>ユーザー名を設定</td></tr>
+    <tr><td><code>git config --global user.email "メールアドレス"</code></td><td>メールアドレスを設定</td></tr>
+    <tr><td><code>git config --list</code></td><td>現在の設定内容を確認</td></tr>
+  </table>
+
+  <h2>📁 リポジトリの作成・取得</h2>
+  <table>
+    <tr><th>コマンド</th><th>説明</th></tr>
+    <tr><td><code>git init</code></td><td>カレントディレクトリをGitリポジトリにする</td></tr>
+    <tr><td><code>git clone &lt;URL&gt;</code></td><td>リモートリポジトリをローカルに複製</td></tr>
+  </table>
+
+  <h2>📦 ファイルの追加・コミット</h2>
+  <table>
+    <tr><th>コマンド</th><th>説明</th></tr>
+    <tr><td><code>git status</code></td><td>作業状況を確認</td></tr>
+    <tr><td><code>git add &lt;ファイル&gt;</code></td><td>指定ファイルをステージに追加</td></tr>
+    <tr><td><code>git add .</code></td><td>変更全体をステージに追加</td></tr>
+    <tr><td><code>git commit -m "メッセージ"</code></td><td>ステージ済みの変更を記録</td></tr>
+    <tr><td><code>git rm &lt;ファイル&gt;</code></td><td>ファイルを削除してステージに追加</td></tr>
+  </table>
+
+  <h2>🔍 履歴と差分</h2>
+  <table>
+    <tr><th>コマンド</th><th>説明</th></tr>
+    <tr><td><code>git log</code></td><td>コミット履歴を詳細表示</td></tr>
+    <tr><td><code>git log --oneline</code></td><td>履歴を1行ずつ簡潔に表示</td></tr>
+    <tr><td><code>git diff</code></td><td>ステージ未追加の差分を確認</td></tr>
+    <tr><td><code>git diff --staged</code></td><td>ステージ済みの差分を確認</td></tr>
+  </table>
+
+  <h2>🚀 リモートリポジトリ連携</h2>
+  <table>
+    <tr><th>コマンド</th><th>説明</th></tr>
+    <tr><td><code>git remote -v</code></td><td>リモートのURLを確認</td></tr>
+    <tr><td><code>git push origin main</code></td><td>mainブランチをリモートに送信</td></tr>
+    <tr><td><code>git pull origin main</code></td><td>リモートの変更を取得して統合</td></tr>
+    <tr><td><code>git fetch</code></td><td>リモートの変更を取得するが統合しない</td></tr>
+  </table>
+
+  <h2>🌱 ブランチ管理</h2>
+  <table>
+    <tr><th>コマンド</th><th>説明</th></tr>
+    <tr><td><code>git branch</code></td><td>ローカルのブランチ一覧を表示</td></tr>
+    <tr><td><code>git branch &lt;名前&gt;</code></td><td>新しいブランチを作成</td></tr>
+    <tr><td><code>git checkout &lt;名前&gt;</code></td><td>指定ブランチに切り替え</td></tr>
+    <tr><td><code>git checkout -b &lt;名前&gt;</code></td><td>新規作成と切替を同時に実行</td></tr>
+    <tr><td><code>git merge &lt;名前&gt;</code></td><td>指定ブランチを現在のブランチに統合</td></tr>
+  </table>
+
+  <h2>♻️ 巻き戻し・リセット</h2>
+  <table>
+    <tr><th>コマンド</th><th>説明</th></tr>
+    <tr><td><code>git restore &lt;ファイル&gt;</code></td><td>ステージしていない変更を取り消し</td></tr>
+    <tr><td><code>git reset &lt;ファイル&gt;</code></td><td>ステージを解除</td></tr>
+    <tr><td><code>git reset --hard HEAD</code></td><td>すべての変更を取り消す（注意）</td></tr>
+  </table>
+
+  <h2>🔧 補助コマンド</h2>
+  <ul>
+    <li><code>git stash</code>：作業途中の変更を一時退避</li>
+    <li><code>git stash pop</code>：退避した変更を再適用</li>
+    <li><code>git tag &lt;タグ名&gt;</code>：特定コミットにタグ付け</li>
+    <li><code>git revert &lt;コミットID&gt;</code>：指定コミットを打ち消す新規コミットを作成</li>
+  </ul>
+
+  <hr>
+  <p>（このまとめは、以下の参考サイトをベースに、わかりやすさと補足内容を加えたものです）</p>
+  <p>参考：よく使うGitコマンド19選！使い方を初心者向けにわかりやすく解説（侍エンジニア編集部）:contentReference[oaicite:1]{index=1}</p>
+  <li><a href="https://www.sejuku.net/blog/5816" target="_blank">参考にしたページ2</a></li>
+</body>
+</html>
