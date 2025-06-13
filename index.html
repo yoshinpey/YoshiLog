@@ -4,70 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YoshiLog</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
-      margin: 0;
-      padding: 40px;
-      line-height: 1.6;
-    }
-
-    h1 {
-      color: #007acc;
-      font-size: 2.5em;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      margin: 1em 0;
-    }
-
-    a {
-      text-decoration: none;
-      color: #007acc;
-      font-weight: bold;
-      padding: 10px 15px;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-
-    a:hover {
-      background-color: #e0f0ff;
-    }
-
-    .footer {
-      margin-top: 3em;
-      font-size: 0.9em;
-      color: #888;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>YoshiLog</h1>
-    <p>よしんぺいの学習記録まとめサイトです📘</p>
+  <header class="header">
+    <div class="site-title">YoshiLog</div>
+  </header>
 
-    <ul>
+  <main class="container">
+    <div class="profile">
+      <img src="images/icon.png" alt="アイコン">
+      <div class="profile-text">
+      <h2 class="profile-name">よしんぺい / yoshinpey</h2>
+        <p>ゲームプログラマー志望。C++ や UnrealEngine を中心に学習・制作中。<br>
+        このページでは学んだことや開発記録などをまとめていきます 📘</p>
+      </div>
+    </div>
+
+    <ul class="link-list">
       <li><a href="ghpages.html">🌐 GitHub Pages 設定メモ</a></li>
       <li><a href="under_construction.html">📌 C++ 学習まとめ</a></li>
       <li><a href="under_construction.html">🎮 ゲーム開発メモ</a></li>
-      <li><a href="under_construction.html">🧰 よく使うツール＆コマンド集</a></li>
+      <li><a href="favoriteToolsSummary.html">🧰 よく使うツール集</a></li>
     </ul>
 
-    <div class="footer">
+    <footer class="footer">
       &copy; 2025 よしんぺい
-    </div>
-  </div>
+    </footer>
+  </main>
 </body>
 </html>
