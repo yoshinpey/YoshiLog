@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第1章 C++の基本</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>第1章：C++の基本</h1>
+    <nav><a href="study.html">← 戻る</a></nav>
+  </header>
+
+  <section id="1-1">
+    <h2>1-1 インクルードと名前空間</h2>
+    <p>C++では必要な機能を使うためにヘッダーファイルを<code>#include</code>で読み込みます。
+      標準の機能を省略して使うために<code>using namespace std;</code>を使いますが、
+      規模の大きいプロジェクトでは衝突を避けるため明示するのが望ましいです。</p>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+  cout &lt;&lt; "Hello, C++!" &lt;&lt; endl;
+  return 0;
+}</code></pre>
+  </section>
+
+  <section id="1-2">
+    <h2>1-2 標準入出力</h2>
+    <p>標準入力には<code>cin</code>、出力には<code>cout</code>を使います。スペース区切りの入力が可能で、改行で終了します。</p>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+  int x;
+  string name;
+  cin &gt;&gt; x &gt;&gt; name;
+  cout &lt;&lt; "数値: " &lt;&lt; x &lt;&lt; ", 名前: " &lt;&lt; name &lt;&lt; endl;
+  return 0;
+}</code></pre>
+    <p>1行すべてを取得したい場合は<code>getline</code>を使います。</p>
+    <pre><code>string line;
+getline(cin, line);</code></pre>
+  </section>
+
+</body>
+</html>

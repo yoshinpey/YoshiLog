@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>第4章 関数とクラスと構造体</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>第4章 関数とクラスと構造体</h1>
+    <nav><a href="study.html">← 戻る</a></nav>
+  </header>
+
+  <section id="4-1">
+    <h2>4-1 クラスの宣言と定義</h2>
+    <pre><code>class Player {
+public:
+  std::string name;
+  int hp;
+
+  void attack() {
+    std::cout &lt;&lt; name &lt;&lt; " attacks!" &lt;&lt; std::endl;
+  }
+};</code></pre>
+  </section>
+
+  <section id="4-2">
+    <h2>4-2 メンバ変数とメンバ関数</h2>
+    <p>クラス内部の変数や関数を定義します。private/publicの使い分けも意識しましょう。</p>
+  </section>
+
+  <section id="4-3">
+    <h2>4-3 動的クラスの生成と削除</h2>
+    <pre><code>Player* p = new Player();
+p-&gt;name = "Taro";
+delete p;</code></pre>
+  </section>
+</body>
+</html>

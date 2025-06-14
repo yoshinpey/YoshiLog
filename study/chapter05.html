@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>第5章 ポインタと参照</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>第5章 ポインタと参照</h1>
+    <nav><a href="study.html">← 戻る</a></nav>
+  </header>
+
+  <section id="5-1">
+    <h2>5-1 ポインタの基本</h2>
+    <pre><code>int a = 10;
+int* p = &a;
+std::cout &lt;&lt; *p &lt;&lt; std::endl; // aの値を出力</code></pre>
+  </section>
+
+  <section id="5-2">
+    <h2>5-2 参照と参照渡し</h2>
+    <pre><code>void add(int& ref) {
+  ref += 5;
+}
+
+int num = 3;
+add(num);
+std::cout &lt;&lt; num &lt;&lt; std::endl; // 8</code></pre>
+  </section>
+
+  <section id="5-3">
+    <h2>5-3 ポインタと配列</h2>
+    <pre><code>int arr[] = {1, 2, 3};
+int* p = arr;
+std::cout &lt;&lt; *(p + 1) &lt;&lt; std::endl; // 2</code></pre>
+  </section>
+</body>
+</html>

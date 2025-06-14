@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>第3章 配列･ベクターとアルゴリズム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>第3章 配列･ベクターとアルゴリズム</h1>
+    <nav><a href="study.html">← 戻る</a></nav>
+  </header>
+
+  <section id="3-1">
+    <h2>3-1 固定長配列と可変長配列の操作</h2>
+    <pre><code>// 固定長配列
+int arr[3] = {1, 2, 3};
+
+// std::vector（可変長配列）
+#include &lt;vector&gt;
+std::vector<int> vec = {4, 5, 6};
+vec.push_back(7);
+</code></pre>
+  </section>
+
+  <section id="3-2">
+    <h2>3-2 mapとイテレーター</h2>
+    <pre><code>#include &lt;map&gt;
+std::map&lt;std::string, int&gt; score;
+score["Alice"] = 90;
+score["Bob"] = 80;
+
+// イテレータで全要素表示
+for (auto it = score.begin(); it != score.end(); ++it) {
+  std::cout &lt;&lt; it-&gt;first &lt;&lt; ": " &lt;&lt; it-&gt;second &lt;&lt; std::endl;
+}</code></pre>
+  </section>
+</body>
+</html>

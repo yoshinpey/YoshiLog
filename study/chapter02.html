@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>第2章 文字列操作と型変換</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>第2章 文字列操作と型変換</h1>
+    <nav><a href="study.html">← 戻る</a></nav>
+  </header>
+
+  <section id="2-1">
+    <h2>2-1 型の宣言と変換</h2>
+    <p>数値と文字列の相互変換は、C++において基本中の基本です。</p>
+    <pre><code>// int → string
+int num = 123;
+std::string str = std::to_string(num);
+
+// string → int
+std::string input = "456";
+int val = std::stoi(input);</code></pre>
+  </section>
+
+  <section id="2-2">
+    <h2>2-2 文字列操作</h2>
+    <p>文字列の扱いには <code>std::string</code> を使います。C言語の <code>char*</code> とは異なり、より直感的に操作できます。</p>
+    <pre><code>std::string name = "Taro";
+name += " Yamada"; // 文字列の連結
+std::cout << name << std::endl;
+
+// 部分文字列の取得
+std::string part = name.substr(0, 4);
+
+// 1文字ずつ処理
+for (char c : name) {
+  std::cout << c << ' ';
+}</code></pre>
+  </section>
+</body>
+</html>
